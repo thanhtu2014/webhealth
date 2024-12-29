@@ -10,15 +10,17 @@ import m02 from '@/assets/images/meal-plan/m02.jpg';
 import s01 from '@/assets/images/meal-plan/s01.jpg';
 import FilterIcon from '@/container/HomePage/FilterIcon';
 import PrimaryButton from '@/components/Button/PrimaryButton';
+import iconKnife from '@/assets/images/icons/icon_knife.png';
+import iconCup from '@/assets/images/icons/icon_cup.png';
 import MyLineChart from './LineChart';
 import DonusChart from './DonusChart';
 
 function HomeContainer() {
   const filter = [
-    { id: 1, label: 'Morning', isSnack: false },
-    { id: 2, label: 'Lunch', isSnack: false },
-    { id: 3, label: 'Dinner', isSnack: false },
-    { id: 4, label: 'Snack', isSnack: true },
+    { id: 1, label: 'Morning', icon: iconKnife },
+    { id: 2, label: 'Lunch', icon: iconKnife },
+    { id: 3, label: 'Dinner', icon: iconKnife },
+    { id: 4, label: 'Snack', icon: iconCup },
   ];
   const meals = [
     { id: 1, name: 'Morning', time: '05.20', image: m01 },
@@ -47,7 +49,7 @@ function HomeContainer() {
       </div>
       <div className="w-full px-2 flex justify-center gap-2 mg:gap-5 md:gap-10 xl:gap-16 cursor-pointer">
         {filter.map((item) => (
-          <FilterIcon isSnack={item.isSnack} label={item.label} />
+          <FilterIcon icon={item.icon} label={item.label} />
         ))}
       </div>
       <div className="w-full px-[5vw] md:px-[8vw] xl:px-[12vw] grid grid-cols-12 gap-2">
