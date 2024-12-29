@@ -4,27 +4,28 @@ import { Navigate, Outlet } from 'react-router-dom';
 import { useAuth } from '@/hooks';
 
 import { ROUTES } from '@/constants';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 
 function AuthLayout() {
   const { isAuth } = useAuth();
 
   return (
     <div className="auth-layout">
-      {!isAuth &&
+      {!isAuth && (
         <Navigate
           to={{
             pathname: ROUTES.LOGIN_PATH,
           }}
-        />}
-      {isAuth &&
-        <div className="auth-layout">
-          <div className="auth-layout__content">
-            <div className="main-content">
-            <Outlet />
-            </div>
-          </div>
+        />
+      )}
+      {isAuth && (
+        <div className="min-h-screen">
+          <Header />
+          <Outlet />
+          <Footer />
         </div>
-      }
+      )}
     </div>
   );
 }

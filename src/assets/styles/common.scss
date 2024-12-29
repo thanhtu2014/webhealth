@@ -14,5 +14,17 @@
 }
 
 .font-JM {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #ffcc21;
+  border-radius: 4px;
+}
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #777777;
 }
