@@ -9,6 +9,8 @@ const StorageKey = {
 const ROUTES = {
   ROOT_PATH: '/',
   LOGIN_PATH: '/signin',
+  RECORD_PATH: '/my-records',
+  COLUMN_PATH: '/columns',
 };
 
 export const HEADER = [
@@ -19,9 +21,4 @@ export const HEADER = [
 
 const PAGE_SIZE = 10;
 
-export {
-  ENV,
-  ROUTES,
-  StorageKey,
-  PAGE_SIZE,
-};
+export { ENV, ROUTES, StorageKey, PAGE_SIZE };

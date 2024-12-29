@@ -1,3 +1,4 @@
+import HomeContainer from '@/container/HomePage';
 import React from 'react';
 // import { useDispatch } from 'react-redux';
 
@@ -12,18 +13,7 @@ function HomePage() {
   //   dispatch(logout());
   // };
 
-  return (
-    <div className="home-page">
-      <div className="container">
-      <p className="intro__title">
-            Home
-          </p>
-          <p className="intro__description">
-            Home
-          </p>
-      </div>
-    </div>
-  );
+  return <HomeContainer />;
 }
 
 export default HomePage;
